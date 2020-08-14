@@ -1,0 +1,101 @@
+
+
+<%= form_with(model: @student, local: true) do |f| %>
+
+  <div class="row">
+     <div class="col-md-4">
+
+     <%= f.label :first_name , :class => "form-controll"%>
+   </div>
+      <div class="col-md-4">
+
+     <%= f.text_field :firstname, :class => "form-controll" %>
+    </div> 
+  </div>
+  <div class="row">
+     <div class="col-md-4">
+
+     <%= f.label :last_name , :class => "form-controll"%>
+   </div>
+      <div class="col-md-4">
+
+     <%= f.text_field :lastname, :class => "form-controll" %>
+    </div> 
+  </div>
+  <div class="row">
+
+    <div class="col-md-4">
+
+       <%= f.label :age, :class => "form-controll" %>
+     </div>
+       <div class="col-md-4">
+
+       <%= f.number_field :age, :class => "form-controll" %>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-md-4">
+
+      <%= f.label :gender, :class => "form-controll" %>
+    </div>
+      <div class="col-md-4">
+
+     <label><input value="male" type="radio" name="student[gender]" checked>Male</label>
+      <label><input value="female" type="radio" name="student[gender]" checked>Female</label>
+
+
+    </div>
+
+  </div>
+  <div class="row">
+
+    <div class="col-md-4">
+
+
+      <%= f.label :address, :class => "form-controll" %>
+    </div>
+    <div class="col-md-4">
+
+      <%= f.text_field :address, :class => "form-controll" %>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-md-4">
+     <%= f.label :phone, :class => "form-controll" %>
+   </div>
+     <div class="col-md-4">
+
+      <%= f.text_field :phone, :class => "form-controll" %>
+    </div>
+  </div>
+<div class="row">
+     <div class="col-md-4">
+
+     <%= f.label :email , :class => "form-controll"%>
+   </div>
+      <div class="col-md-4">
+
+     <%= f.email_field :email, :class => "form-controll" %>
+    </div> 
+  </div>
+    <div class="row">
+     <div class="col-md-4">
+
+     <%= f.label :select_courses , :class => "form-controll"%>
+   </div>
+      <div class="col-md-4">
+      <select name="student[course_id]" id="course_id">
+          <% @courses.all.each do |course| %>
+          <option value="<%= course.id %>"> <%= course.name %> </option>
+           <% end %>
+         </select>
+    </div> 
+  </div>
+     <div class="modal-footer">
+          <%= f.submit "save" , :class =>"btn btn-danger" %>
+
+         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+    </div>
+  <% end %>        

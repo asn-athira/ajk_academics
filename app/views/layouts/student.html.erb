@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <%= render partial: 'layouts/student/head' %>
+
+  
+  <body style="background-color: #EAF9FA;">
+    
+        <%= render partial: 'layouts/student/header' %>
+        <%= render partial: 'layouts/student/sidebar' %>
+
+
+
+       <%= yield %>
+
+     
+       <%= render partial: 'layouts/student/footer' %>
+ 
+       <%= render partial: 'layouts/student/scripts' %>
+       <!--show modal-->
+       <div id="GENERIC_MODAL_DIV">
+  	   </div>
+
+
+
+  </body>
+
+
+</html>

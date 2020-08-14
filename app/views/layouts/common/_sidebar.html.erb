@@ -1,0 +1,25 @@
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"><br><br>
+      <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <span data-feather="home"></span>
+               
+                  <center><%= link_to content_tag(:i, "", class: "fas fa-tachometer-alt") + "   Dashboard", courses_path %> </center>
+              
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file"></span>
+              <center><%= link_to content_tag(:i, "", class: "fas fa-book-open") + "   Courses", courses_path %> </center>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file"></span><center>
+              <%= link_to content_tag(:i, "", class: "fas fa-male") + "   Students", students_path %>       </center>
+              </a>
+          </li>
+         </ul>
+      </div>
+    </nav>
